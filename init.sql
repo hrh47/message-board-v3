@@ -46,7 +46,7 @@ CREATE INDEX idx_comments_timestamp ON comments (timestamp);
 
 CREATE TABLE sessions (
 	id VARCHAR(32),
-	data BYTEA,
+	data TEXT,
 	expiry TIMESTAMP NOT NULL,
 	PRIMARY KEY (id)
 );
