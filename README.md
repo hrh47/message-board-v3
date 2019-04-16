@@ -1,6 +1,6 @@
 # 留言版
 
-### [demo](https://message-board-v3.herokuapp.com/)
+### [demo](https://message-board-v3.herokuapp.com/) 帳號：test / 密碼：test
 
 ## 如何安裝
 
