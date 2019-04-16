@@ -1,0 +1,46 @@
+body {
+	height: 100vh;
+	background-color: #f1f3f5;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+.login {
+	padding-top: 3rem;
+}
+
+.login .col-4 {
+	background-color: #ffffff;
+}
+
+.register {
+	padding-top: 3rem;
+}
+
+.register .col-4 {
+	background-color: #ffffff;
+}
+
+.post {
+	background-color: #ffffff;
+}
+
+.post-author, .comment-author {
+	font-weight: 700;
+}
+
+.post-form > textarea {
+	height: 200px;
+	resize: none;
+}
+
+.comment {
+	background-color: #f1f3f5;
+	border: 1px solid #dee2e6;
+}
+
+.comment-form textarea {
+	resize: none;
+}
