@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="col-8 m-auto">
+		<div class="col-md-8 col-sm-10 m-auto">
 			<?php require('partials/post_form.php'); ?>
 			<div class="my-4">
 				<h1 id="post-count"><?= $totalPost . ' 則留言' ?></h1>

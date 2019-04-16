@@ -11,7 +11,7 @@ body * {
 	padding-top: 3rem;
 }
 
-.login .col-4 {
+.login > div {
 	background-color: #ffffff;
 }
 
@@ -19,7 +19,7 @@ body * {
 	padding-top: 3rem;
 }
 
-.register .col-4 {
+.register > div {
 	background-color: #ffffff;
 }
 
@@ -32,6 +32,7 @@ body * {
 }
 
 .post-form > textarea {
+	min-height: 150px;
 	height: 200px;
 	resize: none;
 }

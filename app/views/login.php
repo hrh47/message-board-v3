@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row d-flex justify-content-center m-4">
-		<div class="col-4">
+		<div class="col-sm-10 col-md-8 col-lg-4">
 			<?php $messages = getFlashedMessages(); ?>
 			<?php if ($messages): ?>
 				<?php foreach ($messages as $message): ?>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<div class="row d-flex justify-content-center login">
-		<div class="col-4 shadow p-4">
+		<div class="col-xs-10 col-md-8 col-lg-4 shadow p-4">
 			<h1><?= $title; ?></h1>
 			<form class="mb-2" id="login-form" action="/login" method="POST">
 				<input class="form-control" type="text" name="username" placeholder="帳號" required>
