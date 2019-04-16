@@ -61,7 +61,7 @@ function commentFormSubmitCallback(e) {
 }
 
 function formatTimestamp(timestamp) {
-	return moment(timestamp).fromNow();
+	return moment.utc(timestamp).fromNow();
 }
 
 function ajax(url, data, callback) {
