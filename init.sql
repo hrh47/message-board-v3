@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS sessions;
 
 
 CREATE TABLE users (
-	id INTEGER AUTO_INCREMENT,
+	id SERIAL,
 	email VARCHAR(128) UNIQUE,
 	username VARCHAR(64) UNIQUE,
 	password VARCHAR(128),
@@ -19,9 +19,9 @@ CREATE INDEX idx_users_nickname ON users (nickname);
 
 
 CREATE TABLE posts (
-	id INTEGER AUTO_INCREMENT,
+	id SERIAL,
 	content TEXT NOT NULL,
-	timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+	timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	user_id INTEGER,
 	PRIMARY KEY (id),
 	FOREIGN KEY (user_id) REFERENCES users (id)
@@ -31,9 +31,9 @@ CREATE INDEX idx_posts_timestamp ON posts (timestamp);
 
 
 CREATE TABLE comments (
-	id INTEGER AUTO_INCREMENT,
+	id SERIAL,
 	content TEXT NOT NULL,
-	timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+	timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	post_id INTEGER,
 	user_id INTEGER,
 	PRIMARY KEY (id),
@@ -46,7 +46,7 @@ CREATE INDEX idx_comments_timestamp ON comments (timestamp);
 
 CREATE TABLE sessions (
 	id VARCHAR(32),
-	data BLOB,
-	expiry DATETIME NOT NULL,
+	data TEXT,
+	expiry TIMESTAMP NOT NULL,
 	PRIMARY KEY (id)
 );

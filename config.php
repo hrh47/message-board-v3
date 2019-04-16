@@ -1,15 +1,13 @@
 <?php
 
-$dotenv = \Dotenv\Dotenv::create(__DIR__);
-$dotenv->load();
+$db = parse_url(getenv('DATABASE_URL'));
 
 return [
 	'database' => [
-		'host' => $_ENV['DB_HOST'],
-		'connection' => $_ENV['DB_CONNECTION'],
-		'name' => $_ENV['DB_NAME'],
-		'username' => $_ENV['DB_USERNAME'],
-		'password' => $_ENV['DB_PASSWORD'],
+		'connection' => 'pgsql:host=' . $db['host'] . ';port=' . $db['port'],
+		'name' => ltrim($db['path'], '/'),
+		'username' => $db['user'],
+		'password' => $db['pass'],
 		'options' => [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 		]
