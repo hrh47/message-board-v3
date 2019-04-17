@@ -5,5 +5,9 @@ require 'core/bootstrap.php';
 
 use App\Core\{Router, Request};
 
-Router::load('app/routes.php')
-	->direct(Request::uri(), Request::method());
+try {
+	Router::load('app/routes.php')
+		->direct(Request::uri(), Request::method());
+} catch (\Exception $e) {
+	view('500', ['title' => 'Internal Server Error']);
+}

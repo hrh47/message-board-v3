@@ -28,7 +28,9 @@ class Router
 			return;
 		}
 
-		throw new Exception('No route defined for this URI');
+		throw new Exception('');
+
+		view('404', ['title' => 'Not Found Error']);
 	}
 
 	public function get($uri, $controller)
