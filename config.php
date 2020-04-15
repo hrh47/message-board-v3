@@ -4,7 +4,7 @@ $db = parse_url(getenv('DATABASE_URL'));
 
 return [
 	'database' => [
-		'connection' => 'pgsql:host=' . $db['host'] . ';port=' . (string)$db['port'],
+		'connection' => 'pgsql:host=' . $db['host'] . ';port=' . (string) $db['port'],
 		'name' => ltrim($db['path'], '/'),
 		'username' => $db['user'],
 		'password' => $db['pass'],
